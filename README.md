@@ -19,6 +19,8 @@ a message notification for vue
 **deplay**	`Int` deplay time (`second`)
 
 
+#### demo
+
 `success`
 
 > `this.$notify.success("success message", 2)`
