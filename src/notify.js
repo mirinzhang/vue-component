@@ -1,6 +1,7 @@
 'use strict'
 import Vue from 'vue';
-let Notification = Vue.extend(require('./tpl.vue'));
+let Notification = Vue.extend(require('./notify.vue'));
+
 export default {
   install: function(Vue, options){
     let notify = new Notification();
