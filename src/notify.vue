@@ -65,7 +65,7 @@
       return {
         msg: "",
         msgClass: "success",
-        isShow: true
+        isShow: false
       }
     },
     methods: {
@@ -87,8 +87,9 @@
       },
       pushMsg: function(msg, delay){
         this.msg = msg;
+        this.isShow = true;
         setTimeout(function (){
-          this.isShow = false
+          this.isShow = false;
         }.bind(this), delay * 1000);
       }
     }
