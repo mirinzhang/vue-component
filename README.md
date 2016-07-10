@@ -1,3 +1,3 @@
 ### vue-component
 
-> some vue component for day works.
+> some vue components of daily works.
