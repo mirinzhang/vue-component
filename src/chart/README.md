@@ -17,13 +17,19 @@
 
 > `this.$chart.draw(params)`
 
+#### HTML
+
+```html
+<canvas id="draw"></canvas>
+```
+
 #### params
 
 ```javascript
 {
     type: "line",
     labels: chartLabels, // Array
-    elementId: "canvas", // html element Id
+    elementId: "draw", // html element Id
     dataSets: [{
         title: "chartjs canvas", // chart title
         fill: true, // true/false
