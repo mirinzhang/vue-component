@@ -15,7 +15,7 @@
 
 #### Useage
 
-> `this.$chart.draw(param)`
+> `this.$chart.draw(params)`
 
 #### params
 
