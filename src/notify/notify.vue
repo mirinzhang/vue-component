@@ -1,4 +1,4 @@
-<style>
+<style scoped>
   .alert {
     position: fixed;
     top: 50%;
@@ -56,11 +56,12 @@
 </style>
 
 <template>
-  <div class="alert" :class="msgClass" v-if="isShow" transition="alert">{{msg}}</div>
+  <div class="alert" :class="msgClass" v-if="isShow" transition="alert" v-text="msg"></div>
 </template>
 
 <script>
   export default {
+    name: "Notify",
     data() {
       return {
         msg: "",
@@ -69,28 +70,29 @@
       }
     },
     methods: {
-      success: function(msg, delay){
+      success(msg, delay){
         this.msgClass = "success"
         this.pushMsg(msg, delay)
       },
-      info: function(msg, delay){
+      info(msg, delay){
         this.msgClass = "info"
         this.pushMsg(msg, delay)
       },
-      warn: function(msg, delay){
+      warn(msg, delay){
         this.msgClass = "warn"
         this.pushMsg(msg, delay)
       },
-      error: function(msg, delay){
+      error(msg, delay){
         this.msgClass = "error"
         this.pushMsg(msg, delay)
       },
-      pushMsg: function(msg, delay){
-        this.msg = msg;
-        this.isShow = true;
-        setTimeout(function (){
-          this.isShow = false;
-        }.bind(this), delay * 1000);
+      pushMsg(msg, delay){
+        this.msg = msg
+        this.isShow = true
+
+        setTimeout(() => {
+          this.isShow = false
+        }, delay * 1000)
       }
     }
   }

@@ -1,22 +1,26 @@
 ### **Dialog**
 
-> 用途：代替`Javascript`原生`confirm`。
-    
-#### 使用   
+> useage：replace`Javascript`origin`confirm`。
+
+#### import
+> `import Dialog from './dialog.js'`
+>
+> `Vue.use(Dialog)`  
+
+#### Useage   
 
     this.$dialog.show(message, callback)
 
+#### params
+    **message**: prompt message
+    **callback**: callback function (returns {Boolean})
 
-#### 参数
-    `message`: 提示信息
-    `callback`: 回调函数（返回值`flag`为Boolean类型）
+#### Example:
 
-#### 示例:
-
-    this.$dialog.show("确定删除吗？", function(flag){
+    this.$dialog.show("Delete?", flag => {
         if(flag){
-            console.info("确定");
-        }else{
-            console.warn("取消");
-        ]
-    }.bind(this));
+            console.info("sure")
+            return
+        }
+        console.warn("cancel");
+    });

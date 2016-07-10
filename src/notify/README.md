@@ -1,25 +1,23 @@
 # vue-notification
 a message notification for vue
 
-### Useage
+#### import
 
-#### init
-
-> `import Notify from './src/notify.js'`
-> 
+> `import Notify from './notify.js'`
+>
 > `Vue.use(Notify)`
 
-#### use
+#### Useage
 
 `this.$notify.` **method** `(message, deplay)`
 
-
+#### params
 **message** `String` notification message
 
 **deplay**	`Int` deplay time (`second`)
 
 
-#### demo
+#### Example
 
 `success`
 
@@ -27,7 +25,7 @@ a message notification for vue
 
 
 `info`
- 
+
 > `this.$notify.info("info message", 2)`
 
 
@@ -38,4 +36,3 @@ a message notification for vue
 `error`
 
 > `this.$notify.error("error message", 2)`
- 

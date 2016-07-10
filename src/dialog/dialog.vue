@@ -79,7 +79,7 @@
     <div class="dialog-container" transition="bounce" v-if="isShow">
         <div class="dialog-content">
             <div class="content">
-                <p>{{message}}</p>
+                <p v-text="message"></p>
             </div>
             <div class="bottom">
                 <span @click="cancel">取消</span>
@@ -95,27 +95,27 @@
             return{
                isShow: false,
                isConfirm: false,
-               message: "参数为空",
+               message: "",
                callBack: null
             }
         },
         methods: {
-            show: function (msg, callback) {
-                this.message = msg;
-                this.isShow = true;
-                this.callBack = callback;
+            show(msg, callback) {
+                this.message = msg
+                this.isShow = true
+                this.callBack = callback
             },
-            confirm: function () {
-                this.isConfirm = true;
-                this.init();
+            confirm() {
+                this.isConfirm = true
+                this.init()
             },
-            cancel: function(){
-                this.isConfirm = false;
-                this.init();
+            cancel(){
+                this.isConfirm = false
+                this.init()
             },
-            init: function () {
-                this.isShow = false;
-                this.callBack(this.isConfirm);
+            init() {
+                this.isShow = false
+                this.callBack(this.isConfirm)
             }
         }
     }
