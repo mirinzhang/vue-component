@@ -12,8 +12,8 @@
     this.$dialog.show(message, callback)
 
 #### params
-    **message**: prompt message
-    **callback**: callback function (returns {Boolean})
+**message**: prompt message
+**callback**: callback function (returns {Boolean})
 
 #### Example:
 
