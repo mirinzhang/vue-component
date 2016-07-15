@@ -11,7 +11,7 @@
 
 #### Useage
 
-> `this.$log.(param)`
+> `this.$log(param)`
 
 #### param
 
